@@ -1,4 +1,4 @@
-from pages.home import App
+from pages.app import App
 
 home = App()
 
