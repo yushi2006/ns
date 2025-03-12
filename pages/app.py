@@ -19,15 +19,19 @@ class App(ctk.CTk):
         self.sidebar.grid(row=0, column=0, sticky="ns")
         self.sidebar.grid_rowconfigure((0, 1, 2, 3), weight=1)
 
+        # Sidebar text
+        self.sidebar_text = ctk.CTkLabel(self.sidebar, text="App Functionality", fg_color="transparent")
+        self.sidebar_text.grid(row=0, column=0, pady=10, padx=20, sticky="ew")
+        
         # Sidebar buttons
-        self.btn_interp = ctk.CTkButton(self.sidebar, text="Interpolation", command=self.show_interp)
-        self.btn_interp.grid(row=0, column=0, pady=10, padx=20, sticky="ew")
+        self.btn_interp = ctk.CTkButton(self.sidebar, text="Interpolation", fg_color="transparent", command=self.show_interp)
+        self.btn_interp.grid(row=1, column=0, pady=10, padx=20, sticky="ew")
 
-        self.btn_curve = ctk.CTkButton(self.sidebar, text="Curve Fitting", command=self.show_curve)
-        self.btn_curve.grid(row=1, column=0, pady=10, padx=20, sticky="ew")
+        self.btn_curve = ctk.CTkButton(self.sidebar, text="Curve Fitting", fg_color="transparent", command=self.show_curve)
+        self.btn_curve.grid(row=2, column=0, pady=10, padx=20, sticky="ew")
 
-        self.btn_integr = ctk.CTkButton(self.sidebar, text="Integration", command=self.show_integr)
-        self.btn_integr.grid(row=2, column=0, pady=10, padx=20, sticky="ew")
+        self.btn_integr = ctk.CTkButton(self.sidebar, text="Integration", fg_color="transparent", command=self.show_integr)
+        self.btn_integr.grid(row=3, column=0, pady=10, padx=20, sticky="ew")
 
         # Main container for pages (right column)
         self.main_container = ctk.CTkFrame(self)
