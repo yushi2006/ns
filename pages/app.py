@@ -1,4 +1,6 @@
 import customtkinter as ctk
+from pages.interpolation import InterpolationPage
+from pages.curve_fitting import CurveFittingPage
 
 # Set your appearance and color theme (you can tweak these if you want)
 ctk.set_appearance_mode("System")  # "Dark", "Light", or "System"
@@ -60,17 +62,6 @@ class App(ctk.CTk):
     def show_integr(self):
         self.page_integr.tkraise()
 
-class InterpolationPage(ctk.CTkFrame):
-    def __init__(self, parent):
-        super().__init__(parent)
-        label = ctk.CTkLabel(self, text="Interpolation Page", font=("Roboto", 20))
-        label.pack(pady=20, padx=20)
-
-class CurveFittingPage(ctk.CTkFrame):
-    def __init__(self, parent):
-        super().__init__(parent)
-        label = ctk.CTkLabel(self, text="Curve Fitting Page", font=("Roboto", 20))
-        label.pack(pady=20, padx=20)
 
 class IntegrationPage(ctk.CTkFrame):
     def __init__(self, parent):
