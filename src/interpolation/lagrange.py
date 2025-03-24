@@ -1,7 +1,6 @@
 from src.interpolation.interpolation import Interpolation
 import matplotlib.pyplot as plt
 import numpy as np
-from typing import Optional
 
 class Lagrange(Interpolation):
     def interpolate(self, new_x: float) -> float:
